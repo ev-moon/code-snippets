@@ -1,0 +1,7 @@
+from bisect import bisect_left, bisect_right
+
+# count number of values in sorted list O(N)
+def count_by_range(a, left_value, right_value):
+    right_index = bisect_right(a, right_value)
+    left_index = bisect_left(a, left_value)
+    return right_index - left_index
